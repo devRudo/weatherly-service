@@ -1,5 +1,6 @@
 const express = require("express");
 const axios = require("axios");
+const cors = require("cors");
 require("dotenv").config();
 
 const app = express();
@@ -9,6 +10,7 @@ const apikey = process.env.OPEN_WEATHER_API_KEY || "";
 
 app.use(express.json());
 app.use(express.urlencoded());
+app.use(cors());
 
 app.get("/", (req, res) => {
   res.status(200).send("OK | 200");
