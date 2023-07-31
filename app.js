@@ -75,7 +75,7 @@ const getWeatherData = async (req, res) => {
         },
       }
     );
-    // console.log(response.data);
+    console.log(response.data);
     res.status(200).send(response.data);
   } catch (e) {
     res.status(500);
